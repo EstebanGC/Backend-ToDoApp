@@ -3,6 +3,8 @@ package com.sofkau.todo.todoapp.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity(name = "Note")
 @Table(name= "note")
@@ -18,4 +20,8 @@ public class Note {
     private boolean done;
 
     private Long categoryId;
+
+    @OneToMany(mappedBy = "noteId",
+            fetch = FetchType.EAGER)
+    private List<Tag> tags = new ArrayList<>();
 }
