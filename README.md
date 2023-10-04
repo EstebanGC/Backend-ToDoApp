@@ -8,7 +8,7 @@ Before to execute:
 
 -Write the next git command where you want the project: git clone https://github.com/EstebanGC/Backend-ToDoApp/
 
--mvn clean install : to install all the maven dependencies
+-To install all the maven dependencies: mvn clean install
 
 -To execute: ./mvnw spring-boot:run
 
